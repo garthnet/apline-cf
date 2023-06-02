@@ -19,7 +19,7 @@ if [[ -f "/root/Xray/xray" ]]; then
     green "xray文件已存在！"
 else
     echo "开始下载xray文件..."
-    wget https://github.com/XTLS/Xray-core/releases/download/v1.7.0/Xray-linux-32.zip
+    wget https://github.com/XTLS/Xray-core/releases/download/v1.6.1/Xray-linux-32.zip
     cd /root
     mkdir ./Xray
     unzip -d /root/Xray Xray-linux-32.zip
