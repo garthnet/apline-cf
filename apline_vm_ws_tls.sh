@@ -19,11 +19,11 @@ if [[ -f "/root/Xray/xray" ]]; then
     green "xray文件已存在！"
 else
     echo "开始下载xray文件..."
-    wget https://github.com/XTLS/Xray-core/releases/download/v1.7.5/Xray-linux-32.zip
+    wget https://github.com/XTLS/Xray-core/releases/download/v1.4.0/Xray-linux-64.zip
     cd /root
     mkdir ./Xray
-    unzip -d /root/Xray Xray-linux-32.zip
-    rm Xray-linux-32.zip
+    unzip -d /root/Xray Xray-linux-64.zip
+    rm Xray-linux-64.zip
     cd /root/Xray
     if [[ -f "xray" ]]; then
         green "下载成功！"
@@ -239,7 +239,7 @@ cat << EOF > /root/Xray/config.json
                     }
                 ],
                 "cipherSuites": "",
-                "fingerprint": "random",
+                "fingerprint": "",
                 "maxVersion": "1.3",
                 "minVersion": "1.0",
                 "rejectUnknownSni": false,
@@ -287,7 +287,7 @@ data='{
   "tls": "tls",
   "sni": "",
   "alpn": "",
-  "fp": "random"
+  "fp": ""
 }'
 base=$(echo $data | base64)
 share_link="vmess://$base"
